@@ -1,19 +1,26 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Hello from '@/components/Hello';
-import HotNews from '@/components/HotNews';
+import Nav from '../components/Nav';
+import HotNews from '../components/HotNews';
 
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
+  base: __dirname,
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello,
+      name: 'Nav',
+      component: Nav,
       children: [
         {
-          path: '/hot-news',
+          path: '',
+          name: '',
+          component: HotNews,
+        },
+        {
+          path: 'hot-news',
           name: 'HotNews',
           component: HotNews,
         },
