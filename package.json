@@ -10,6 +10,9 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "alloytouch": "^0.2.1",
+    "css3transform": "^1.1.4",
+    "transform": "^1.1.2",
     "vue": "^2.2.1",
     "vue-router": "^2.2.0",
     "vux": "^2.1.1-rc.6"
