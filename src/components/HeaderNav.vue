@@ -54,16 +54,12 @@
           vertical: false,
           property: 'translateX',
           max: 720,
-          touchMove: function touchMove(evt, value) {
-            console.log();
+          change: function change(value) {
             if (value > 0) {
               nav.translateX = 0;
             }
-          },
-          touchEnd: function touchMove(evt, value) {
-            console.log();
-            if (value > 0) {
-              nav.translateX = 0;
+            if (value < -304) {
+              nav.translateX = -304;
             }
           },
         });
